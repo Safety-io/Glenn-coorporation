@@ -52,95 +52,26 @@
         <p>Lorem ipsum dolor sit consectetur adipisicing elit. <br> Iusto debitis ducimus</p>
     </div>
     <div class="properties-container container">
+        @foreach($houses as $house)
         <div class="box">
-            <img src="{{ asset('imgs/home.jpg')}}" alt="#">
-            <h3>$12,999</h3>
+            <img src="/storage/{{$house->image}}" alt="#">
+            <h3>${{ $house->price}}</h3>
             <div class="content">
                 <div class="text">
-                    <h3>The place</h3>
-                    <p>Lubumbashi, Congo</p>
+                    <h3>{{ $house->name }}</h3>
+                    <p>{{ $house->address }}</p>
                 </div>
                 <div class="icon">
-                    <i class="bx bx-bed"><span>5</span></i>
-                    <i class="bx bx-bath"><span>2</span></i>
+                    <i class="bx bx-bed"><span>{{ $house->rooms }}</span></i>
+                    <i class="bx bx-bath"><span>{{ $house->bathrooms }}</span></i>
                 </div>
             </div>
         </div>
+        @endforeach
 
-        <div class="box">
-            <img src="../../../public/imgs/home.jpg" alt="#">
-            <h3>$12,999</h3>
-            <div class="content">
-                <div class="text">
-                    <h3>The place</h3>
-                    <p>Lubumbashi, Congo</p>
-                </div>
-                <div class="icon">
-                    <i class="bx bx-bed"><span>5</span></i>
-                    <i class="bx bx-bath"><span>2</span></i>
-                </div>
-            </div>
-        </div>
+{{--            {{ $houses->links() }}--}}
 
-        <div class="box">
-            <img src="../../../public/imgs/home.jpg" alt="#">
-            <h3>$12,999</h3>
-            <div class="content">
-                <div class="text">
-                    <h3>The place</h3>
-                    <p>Lubumbashi, Congo</p>
-                </div>
-                <div class="icon">
-                    <i class="bx bx-bed"><span>5</span></i>
-                    <i class="bx bx-bath"><span>2</span></i>
-                </div>
-            </div>
-        </div>
 
-        <div class="box">
-            <img src="../../../public/imgs/home.jpg" alt="#">
-            <h3>$12,999</h3>
-            <div class="content">
-                <div class="text">
-                    <h3>The place</h3>
-                    <p>Lubumbashi, Congo</p>
-                </div>
-                <div class="icon">
-                    <i class="bx bx-bed"><span>5</span></i>
-                    <i class="bx bx-bath"><span>2</span></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="../../../public/imgs/home.jpg" alt="#">
-            <h3>$12,999</h3>
-            <div class="content">
-                <div class="text">
-                    <h3>The place</h3>
-                    <p>Lubumbashi, Congo</p>
-                </div>
-                <div class="icon">
-                    <i class="bx bx-bed"><span>5</span></i>
-                    <i class="bx bx-bath"><span>2</span></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="../../../public/imgs/home.jpg" alt="#">
-            <h3>$12,999</h3>
-            <div class="content">
-                <div class="text">
-                    <h3>The place</h3>
-                    <p>Lubumbashi, Congo</p>
-                </div>
-                <div class="icon">
-                    <i class="bx bx-bed"><span>5</span></i>
-                    <i class="bx bx-bath"><span>2</span></i>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -148,7 +79,7 @@
     <h2>Have any question for Us?<br> Let us help you</h2>
 
     <form action="#">
-        <input type="email" name="#" id="email-box" placeholder="youremail@gmail.com" required>
+        <label for="email-box"></label><input type="email" name="#" id="email-box" placeholder="youremail@gmail.com" required>
         <input type="submit" value="Send" class="btn">
     </form>
 </section>
