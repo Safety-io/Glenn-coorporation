@@ -4,7 +4,7 @@
 <section class="home container" id="home">
     <div class="home-text">
         <h1>Find Your next <br>Perfect Place to <br>Live.</h1>
-        <a href="#" class="btn">Sign Up</a>
+        <a href="{{ url("/register") }}" class="btn">Sign Up</a>
     </div>
 </section>
 
