@@ -18,6 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::controller(UserController::class)->group(function (){
     Route::get('/', 'index')->name('pages.index');
 });
+
+Route::get('/details', function() {
+    return view("products.detail");
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

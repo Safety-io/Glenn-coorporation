@@ -1,9 +1,9 @@
-<head>
+{{--<head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{{ asset('style.css')}}">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-</head>
+</head>--}}
 <section class="footer">
     <div class="footer-container container">
         <h2>Glenn Corporation</h2>
