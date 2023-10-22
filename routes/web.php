@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(UserController::class)->group(function (){
     Route::get('/', 'index')->name('pages.index');
+    Route::get('search', 'search')->name('pages.search');
 });
 Route::middleware([
     'auth:sanctum',
