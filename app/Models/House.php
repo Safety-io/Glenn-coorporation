@@ -15,4 +15,6 @@ class House extends Model
         'price',
         'image'
     ];
+
+
 }

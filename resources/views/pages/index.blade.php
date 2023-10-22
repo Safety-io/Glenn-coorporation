@@ -51,6 +51,15 @@
         <h2>Our Featured Properties</h2>
         <p>Lorem ipsum dolor sit consectetur adipisicing elit. <br> Iusto debitis ducimus</p>
     </div>
+
+    <section class="newsletter container">
+    <h2>Have any question for Us?<br> Let us help you</h2>
+
+    <form action="/search" method="GET">
+        <label for="email-box"></label><input type="text" name="q"  placeholder="youremail@gmail.com" >
+        <input type="submit" value="Search" class="btn">
+    </form>
+    </section>
     <div class="properties-container container">
         @foreach($houses as $house)
         <div class="box">
@@ -69,7 +78,10 @@
         </div>
         @endforeach
 
-{{--            {{ $houses->links() }}--}}
+
+                        {{ $houses->links() }}
+
+
 
 
     </div>
@@ -79,7 +91,7 @@
     <h2>Have any question for Us?<br> Let us help you</h2>
 
     <form action="#">
-        <label for="email-box"></label><input type="email" name="#" id="email-box" placeholder="youremail@gmail.com" required>
+        <label for="email-box"></label><input type="email" name="q" id="email-box" placeholder="youremail@gmail.com" required>
         <input type="submit" value="Send" class="btn">
     </form>
 </section>

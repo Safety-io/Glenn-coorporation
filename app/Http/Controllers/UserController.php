@@ -10,11 +10,27 @@ use Nette\Utils\Paginator;
 
 class UserController extends Controller
 {
-    public function index():View
+    public function index():View | Paginator | App
     {
         $houses = House::all()->sortDesc();
-        // pagination
         $houses = House::paginate(1);
         return view('pages.index', ['houses' => $houses]);
     }
+   public function search(Request $request):View
+   {
+       $search = $request->input('q');
+
+       $houses = House::query()
+           ->where('name', 'LIKE', "%{$search}%")
+           ->orWhere('address', 'LIKE', "%{$search}%")
+           ->orWhere('rooms', 'LIKE', "%{$search}%")
+           ->orWhere('price', 'LIKE', "%{$search}%")
+           ->get();
+       return view('pages.search', ['houses' => $houses]);
+
+   }
+
+
+
+
 }
